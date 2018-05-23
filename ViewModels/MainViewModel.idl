@@ -1,0 +1,13 @@
+// MainViewModel
+import "Framework/ViewModelBase.idl";
+import "Framework/DelegateCommand.idl";
+
+namespace MvvmCppWinRT
+{
+	unsealed runtimeclass MainViewModel : ViewModelBase
+    {
+        MainViewModel();
+		String Title{ get; set; };
+		DelegateCommand OnClickCommand{ get; };
+	}
+}

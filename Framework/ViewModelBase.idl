@@ -1,0 +1,10 @@
+// ViewModelBase
+
+namespace MvvmCppWinRT
+{
+    unsealed runtimeclass ViewModelBase : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        ViewModelBase();
+		protected void RaisePropertyChanged(String propertyName);
+	}
+}
