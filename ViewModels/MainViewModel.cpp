@@ -6,15 +6,16 @@ using namespace MvvmCppWinRT::implementation;
 using namespace Windows::Foundation;
 
 MainViewModel::MainViewModel() {
-	//clickCommand = make<DelegateCommand<IInspectable>>(std::bind(&MainViewModel::Click, this));
-	clickCommand = make<DelegateCommand<IInspectable>>(
-		[=](IInspectable const& parameter) {
-			hstring value = parameter.as<IReference<hstring>>().Value();
-			Title(value + L"Johan Lindfors");
-		},
-		[=](IInspectable const& /*parameter*/) {
-			return title != hstring(L"Click MeJohan Lindfors");
-		}
+	clickCommand = make<DelegateCommand>(
+		//std::bind(&MainViewModel::AnotherClick, this)
+		std::bind(&MainViewModel::Click, this, std::placeholders::_1)
+		//,[=](IInspectable const& parameter) {
+		//	hstring value = parameter.as<IReference<hstring>>().Value();
+		//	Title(value + L"Johan Lindfors");
+		//}
+		//,[=](IInspectable const& /*parameter*/) {
+		//	return title != hstring(L"Click meJohan Lindfors");
+		//}
 	);
 }
 
@@ -34,4 +35,8 @@ void MainViewModel::Title(hstring const& value)
 void MainViewModel::Click(IInspectable const& parameter) {
 	hstring value = parameter.as<IReference<hstring>>().Value();
 	Title(value + L"Johan Lindfors");
+}
+
+void MainViewModel::AnotherClick() {
+
 }

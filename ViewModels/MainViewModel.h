@@ -2,6 +2,7 @@
 
 #include "MainViewModel.g.h"
 #include "..\Framework\ViewModelBase.h"
+#include "DelegateCommand.h"
 
 namespace winrt::MvvmCppWinRT::implementation
 {
@@ -15,6 +16,7 @@ namespace winrt::MvvmCppWinRT::implementation
 
 	private:
 		void Click(Windows::Foundation::IInspectable const& parameter);
+		void AnotherClick();
 
 		hstring title;
 		MvvmCppWinRT::DelegateCommand clickCommand{ nullptr };

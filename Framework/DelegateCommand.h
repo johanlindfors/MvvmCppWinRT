@@ -4,14 +4,13 @@
 
 namespace winrt::MvvmCppWinRT::implementation
 {
-	template<typename T>
-	struct DelegateCommand : DelegateCommandT<DelegateCommand<T>>
+	struct DelegateCommand : DelegateCommandT<DelegateCommand>
 	{
-		DelegateCommand(std::function<void(T)> execute) 
+		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> execute)
 			: DelegateCommand(execute, nullptr) 
 		{}
 
-		DelegateCommand(std::function<void(T)> execute, std::function<bool(T)> canExecute)
+		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> execute, std::function<bool(Windows::Foundation::IInspectable)> canExecute)
 		{
 			if (execute == nullptr) {
 				throw winrt::hresult_invalid_argument(L"execute");
@@ -61,8 +60,8 @@ namespace winrt::MvvmCppWinRT::implementation
 	private:
 		event<Windows::Foundation::EventHandler<Windows::Foundation::IInspectable>> canExecuteChanged;
 
-		std::function<void(T)> executeDelegate;
-		std::function<bool(T)> canExecuteDelegate;
+		std::function<void(Windows::Foundation::IInspectable)> executeDelegate;
+		std::function<bool(Windows::Foundation::IInspectable)> canExecuteDelegate;
 		bool lastCanExecute = true;
 	};
 }
