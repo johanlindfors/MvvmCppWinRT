@@ -5,7 +5,7 @@
     xmlns:local="using:MvvmCppWinRT">
 
     <Application.Resources>
-        <!--<local:ScaleConverter x:Key="scaleConverter"/>-->
+        <local:ScaleConverter x:Key="scaleConverter"/>
     </Application.Resources>
 
 </Application>
