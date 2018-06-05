@@ -1,0 +1,6 @@
+namespace MvvmCppWinRT
+{
+    runtimeclass ScaleConverter : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.IValueConverter
+    {
+	}
+}

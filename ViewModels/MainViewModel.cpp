@@ -13,7 +13,7 @@ MainViewModel::MainViewModel() {
 			Title(value + L"Johan Lindfors");
 		},
 		[=](IInspectable const& /*parameter*/) {
-			return title != hstring(L"Click MeJohan Lindfors");
+			return title != hstring(L"Click meJohan Lindfors");
 		}
 	);
 }

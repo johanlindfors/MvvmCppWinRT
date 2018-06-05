@@ -88,6 +88,10 @@
       <DependentUpon>Framework\DelegateCommand.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="Framework\ScaleConverter.h">
+      <DependentUpon>Framework\ScaleConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="Framework\ViewModelBase.h">
       <DependentUpon>Framework\ViewModelBase.idl</DependentUpon>
       <SubType>Code</SubType>
@@ -128,6 +132,10 @@
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\ScaleConverter.cpp">
+      <DependentUpon>Framework\ScaleConverter.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="Framework\ViewModelBase.cpp">
       <DependentUpon>Framework\ViewModelBase.idl</DependentUpon>
       <SubType>Code</SubType>
@@ -152,6 +160,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Midl>
     <Midl Include="Framework\DelegateCommand.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="Framework\ScaleConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
     <Midl Include="Framework\ViewModelBase.idl">

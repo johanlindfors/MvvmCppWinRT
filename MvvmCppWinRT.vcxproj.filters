@@ -15,17 +15,23 @@
       <Filter>ViewModels</Filter>
     </Midl>
     <Midl Include="MainPage.idl" />
+    <Midl Include="Framework\ScaleConverter.idl" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="App.cpp" />
     <ClCompile Include="Generated Files\module.g.cpp" />
     <ClCompile Include="MainPage.cpp" />
+    <ClCompile Include="Framework\ViewModelBase.cpp" />
+    <ClCompile Include="ViewModels\MainViewModel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.h" />
     <ClInclude Include="MainPage.h" />
+    <ClInclude Include="Framework\DelegateCommand.h" />
+    <ClInclude Include="Framework\ViewModelBase.h" />
+    <ClInclude Include="ViewModels\MainViewModel.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
