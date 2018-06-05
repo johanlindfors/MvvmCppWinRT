@@ -17,6 +17,8 @@ MainViewModel::MainViewModel() {
 		//	return title != hstring(L"Click meJohan Lindfors");
 		//}
 	);
+
+	textSize = 150;
 }
 
 hstring MainViewModel::Title() {
@@ -32,9 +34,16 @@ void MainViewModel::Title(hstring const& value)
 	}
 }
 
+double MainViewModel::TextSize() {
+	return textSize;
+}
+
 void MainViewModel::Click(IInspectable const& parameter) {
 	hstring value = parameter.as<IReference<hstring>>().Value();
 	Title(value + L"Johan Lindfors");
+
+	textSize = 100;
+	RaisePropertyChanged(L"TextSize");
 }
 
 void MainViewModel::AnotherClick() {

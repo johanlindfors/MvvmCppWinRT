@@ -12,6 +12,7 @@ namespace winrt::MvvmCppWinRT::implementation
 
 		hstring Title();
 		void Title(hstring const& value);
+		double TextSize();
 		MvvmCppWinRT::DelegateCommand OnClickCommand() { return clickCommand; }
 
 	private:
@@ -19,6 +20,7 @@ namespace winrt::MvvmCppWinRT::implementation
 		void AnotherClick();
 
 		hstring title;
+		double textSize;
 		MvvmCppWinRT::DelegateCommand clickCommand{ nullptr };
 	};
 }

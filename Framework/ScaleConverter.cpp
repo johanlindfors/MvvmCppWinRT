@@ -24,6 +24,9 @@ namespace winrt::MvvmCppWinRT::implementation
 		hstring paramString = parameter.as<IReference<hstring>>().Value();
 
 		double numParam = stod(wstring(paramString.data()));
+		if (numParam == 0) {
+			numParam = 1;
+		}
 
 		return box_value(numValue * numParam);
 	}

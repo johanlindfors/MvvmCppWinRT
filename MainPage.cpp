@@ -13,7 +13,9 @@ namespace winrt::MvvmCppWinRT::implementation
 		viewModel.Title(L"Click me");
 
         InitializeComponent();
-    }
+
+		DataContext(ViewModel());
+	}
 
 	MvvmCppWinRT::MainViewModel MainPage::ViewModel()
     {

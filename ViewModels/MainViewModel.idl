@@ -8,6 +8,7 @@ namespace MvvmCppWinRT
     {
         MainViewModel();
 		String Title{ get; set; };
+		Double TextSize{ get; };
 		DelegateCommand OnClickCommand{ get; };
 	}
 }
