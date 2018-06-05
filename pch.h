@@ -21,3 +21,4 @@
 #include "DelegateCommand.h"
 #include "ViewModelBase.h"
 #include "MainViewModel.h"
+#include "ScaleConverter.h"
