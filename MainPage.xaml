@@ -13,9 +13,9 @@
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="myButton"
                 Command="{x:Bind ViewModel.OnClickCommand}" 
-                CommandParameter="{Binding Title}" 
+                CommandParameter="{x:Bind ViewModel.Title}" 
                 Content="{x:Bind ViewModel.Title, Mode=OneWay}"/>
 
-        <TextBlock Text="This is working" FontSize="{x:Bind ViewModel.TextSize, Mode=OneWay, Converter={StaticResource scaleConverter}, ConverterParameter=2}"/>
+        <TextBlock Text="This is working" FontSize="{x:Bind ViewModel.TextSize, Mode=OneWay, Converter={StaticResource scaleConverter}, ConverterParameter=0.2}"/>
     </StackPanel>
 </Page>

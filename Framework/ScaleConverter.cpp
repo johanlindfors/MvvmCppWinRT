@@ -14,7 +14,7 @@ namespace winrt::MvvmCppWinRT::implementation
 		IInspectable const& parameter, 
 		hstring const& language)
 	{
-		if (targetType.Name != L"double")
+		if (targetType.Name != L"Double")
 		{
 			throw hresult_invalid_argument();
 		}
