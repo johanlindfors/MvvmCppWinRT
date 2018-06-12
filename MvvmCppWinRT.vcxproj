@@ -171,6 +171,11 @@
       <DeploymentContent>false</DeploymentContent>
     </Text>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Framework\Framework\Framework.vcxproj">
+      <Project>{81c4ca33-f7dd-4bee-b0bd-48fa337de27e}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

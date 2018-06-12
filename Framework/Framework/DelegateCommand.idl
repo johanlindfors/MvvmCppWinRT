@@ -1,0 +1,7 @@
+namespace Framework
+{
+	runtimeclass DelegateCommand : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Input.ICommand
+	{
+		void RaiseCanExecuteChanged();
+	}
+}
