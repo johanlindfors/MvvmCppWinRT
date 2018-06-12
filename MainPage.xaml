@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
-        <local:ScaleConverter x:Key="scaleConverter"/>
+        <!--<local:ScaleConverter x:Key="scaleConverter"/>-->
     </Page.Resources>
 
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -16,6 +16,6 @@
                 CommandParameter="{x:Bind ViewModel.Title}" 
                 Content="{x:Bind ViewModel.Title, Mode=OneWay}"/>
 
-        <TextBlock Text="This is working" FontSize="{x:Bind ViewModel.TextSize, Mode=OneWay, Converter={StaticResource scaleConverter}, ConverterParameter=0.2}"/>
+        <!--<TextBlock Text="This is working" FontSize="{x:Bind ViewModel.TextSize, Mode=OneWay, Converter={StaticResource scaleConverter}, ConverterParameter=0.2}"/>-->
     </StackPanel>
 </Page>

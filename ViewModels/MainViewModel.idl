@@ -1,10 +1,10 @@
 // MainViewModel
-import "Framework/ViewModelBase.idl";
+import "Framework/BindableBase.idl";
 import "Framework/DelegateCommand.idl";
 
 namespace MvvmCppWinRT
 {
-	unsealed runtimeclass MainViewModel : ViewModelBase
+	unsealed runtimeclass MainViewModel : BindableBase
     {
         MainViewModel();
 		String Title{ get; set; };

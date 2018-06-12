@@ -1,12 +1,12 @@
 ﻿#pragma once
 
 #include "MainViewModel.g.h"
-#include "..\Framework\ViewModelBase.h"
+#include "..\Framework\BindableBase.h"
 #include "DelegateCommand.h"
 
 namespace winrt::MvvmCppWinRT::implementation
 {
-	struct MainViewModel : MainViewModelT<MainViewModel, MvvmCppWinRT::implementation::ViewModelBase>
+	struct MainViewModel : MainViewModelT<MainViewModel, MvvmCppWinRT::implementation::BindableBase>
 	{
 		MainViewModel();
 

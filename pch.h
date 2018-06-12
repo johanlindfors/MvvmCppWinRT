@@ -19,6 +19,7 @@
 #include "winrt/Windows.UI.Xaml.Input.h"
 
 #include "DelegateCommand.h"
-#include "ViewModelBase.h"
+#include "BindableBase.h"
 #include "MainViewModel.h"
 #include "ScaleConverter.h"
+#include "ObservableVector.h"

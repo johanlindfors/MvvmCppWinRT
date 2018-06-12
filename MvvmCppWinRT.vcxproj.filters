@@ -8,14 +8,14 @@
     <Midl Include="Framework\DelegateCommand.idl">
       <Filter>Framework</Filter>
     </Midl>
-    <Midl Include="Framework\ViewModelBase.idl">
-      <Filter>Framework</Filter>
-    </Midl>
     <Midl Include="ViewModels\MainViewModel.idl">
       <Filter>ViewModels</Filter>
     </Midl>
     <Midl Include="MainPage.idl" />
     <Midl Include="Framework\ScaleConverter.idl">
+      <Filter>Framework</Filter>
+    </Midl>
+    <Midl Include="Framework\BindableBase.idl">
       <Filter>Framework</Filter>
     </Midl>
   </ItemGroup>
