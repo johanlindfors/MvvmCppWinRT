@@ -6,18 +6,22 @@
 
 #include "DelegateCommand.g.h"
 
+using namespace std;
+using namespace winrt;
+using namespace Windows::Foundation;
+
 namespace winrt::Framework::implementation
 {
 	struct DelegateCommand : DelegateCommandT<DelegateCommand>
 	{
-		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> execute)
+		DelegateCommand(function<void(IInspectable)> execute)
 			: DelegateCommand(execute, nullptr)
 		{}
 
-		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> execute, std::function<bool(Windows::Foundation::IInspectable)> canExecute)
+		DelegateCommand(function<void(IInspectable)> execute, function<bool(IInspectable)> canExecute)
 		{
 			if (execute == nullptr) {
-				throw winrt::hresult_invalid_argument(L"execute");
+				throw hresult_invalid_argument(L"execute");
 			}
 			executeDelegate = execute;
 			canExecuteDelegate = canExecute;
@@ -25,10 +29,10 @@ namespace winrt::Framework::implementation
 
 		void RaiseCanExecuteChanged()
 		{
-			canExecuteChanged(*this, Windows::Foundation::IInspectable());
+			canExecuteChanged(*this, IInspectable());
 		}
 
-		winrt::event_token CanExecuteChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
+		event_token CanExecuteChanged(EventHandler<IInspectable> const& handler)
 		{
 			return canExecuteChanged.add(handler);
 		}
@@ -38,7 +42,7 @@ namespace winrt::Framework::implementation
 			canExecuteChanged.remove(token);
 		}
 
-		bool CanExecute(Windows::Foundation::IInspectable const& parameter)
+		bool CanExecute(IInspectable const& parameter)
 		{
 			if (canExecuteDelegate == nullptr) {
 				return true;
@@ -54,7 +58,7 @@ namespace winrt::Framework::implementation
 			return lastCanExecute;
 		}
 
-		void Execute(Windows::Foundation::IInspectable const& parameter)
+		void Execute(IInspectable const& parameter)
 		{
 			if (executeDelegate != nullptr) {
 				executeDelegate(parameter);
@@ -62,10 +66,10 @@ namespace winrt::Framework::implementation
 		}
 
 	private:
-		event<Windows::Foundation::EventHandler<Windows::Foundation::IInspectable>> canExecuteChanged;
+		event<EventHandler<IInspectable>> canExecuteChanged;
 
-		std::function<void(Windows::Foundation::IInspectable)> executeDelegate;
-		std::function<bool(Windows::Foundation::IInspectable)> canExecuteDelegate;
+		function<void(IInspectable)> executeDelegate;
+		function<bool(IInspectable)> canExecuteDelegate;
 		bool lastCanExecute = true;
 	};
 }

@@ -18,8 +18,8 @@
 #include "winrt/Windows.UI.Xaml.Navigation.h"
 #include "winrt/Windows.UI.Xaml.Input.h"
 
-#include "DelegateCommand.h"
-#include "BindableBase.h"
+#include "Framework/DelegateCommand.h"
+#include "Framework/BindableBase.h"
 #include "MainViewModel.h"
 #include "ScaleConverter.h"
 #include "ObservableVector.h"

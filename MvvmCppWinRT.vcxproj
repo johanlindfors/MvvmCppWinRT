@@ -83,14 +83,6 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Framework\BindableBase.h">
-      <DependentUpon>Framework\BindableBase.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClInclude>
-    <ClInclude Include="Framework\DelegateCommand.h">
-      <DependentUpon>Framework\DelegateCommand.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClInclude>
     <ClInclude Include="Framework\ScaleConverter.h">
       <DependentUpon>Framework\ScaleConverter.idl</DependentUpon>
       <SubType>Code</SubType>
@@ -149,12 +141,6 @@
   <ItemGroup>
     <Midl Include="App.idl">
       <DependentUpon>App.xaml</DependentUpon>
-    </Midl>
-    <Midl Include="Framework\BindableBase.idl">
-      <SubType>Designer</SubType>
-    </Midl>
-    <Midl Include="Framework\DelegateCommand.idl">
-      <SubType>Designer</SubType>
     </Midl>
     <Midl Include="Framework\ScaleConverter.idl">
       <SubType>Designer</SubType>
