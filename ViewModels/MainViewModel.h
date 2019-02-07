@@ -6,14 +6,14 @@
 
 namespace winrt::MvvmCppWinRT::implementation
 {
-	struct MainViewModel : MainViewModelT<MainViewModel, MvvmCppWinRT::implementation::BindableBase>
+	struct MainViewModel : MainViewModelT<MainViewModel, BindableBase>
 	{
 		MainViewModel();
 
 		hstring Title();
 		void Title(hstring const& value);
 		double TextSize();
-		MvvmCppWinRT::DelegateCommand OnClickCommand() { return clickCommand; }
+		winrt::Windows::UI::Xaml::Input::ICommand OnClickCommand() { return clickCommand; }
 
 	private:
 		void Click(Windows::Foundation::IInspectable const& parameter);

@@ -9,6 +9,6 @@ namespace MvvmCppWinRT
         MainViewModel();
 		String Title{ get; set; };
 		Double TextSize{ get; };
-		DelegateCommand OnClickCommand{ get; };
+		Windows.UI.Xaml.Input.ICommand OnClickCommand{ get; };
 	}
 }
