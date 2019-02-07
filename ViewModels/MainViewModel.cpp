@@ -7,8 +7,8 @@ using namespace Windows::Foundation;
 
 MainViewModel::MainViewModel() {
 	clickCommand = make<DelegateCommand>(
-		//// Method without parameters
-		//std::bind(&MainViewModel::AnotherClick, this)
+		// Method without parameters
+		std::bind(&MainViewModel::AnotherClick, this)
 
 		//// Method without parameters
 		//std::bind(&MainViewModel::AnotherClick, this),
