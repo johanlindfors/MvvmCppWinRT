@@ -1,12 +1,9 @@
-﻿//
-// pch.h
-// Header for platform projection include files
-//
+﻿#pragma once
 
-#pragma once
-
-#define NOMINMAX
-
+#include <windows.h>
+#include <unknwn.h>
+#include <restrictederrorinfo.h>
+#include <hstring.h>
 #include "winrt/Windows.Foundation.h"
 #include "winrt/Windows.ApplicationModel.Activation.h"
 #include "winrt/Windows.UI.Xaml.h"
@@ -16,7 +13,7 @@
 #include "winrt/Windows.UI.Xaml.Interop.h"
 #include "winrt/Windows.UI.Xaml.Markup.h"
 #include "winrt/Windows.UI.Xaml.Navigation.h"
-#include "winrt/Windows.UI.Xaml.Input.h"
+
 
 #include "DelegateCommand.h"
 #include "BindableBase.h"

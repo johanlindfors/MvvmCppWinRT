@@ -39,8 +39,8 @@ double MainViewModel::TextSize() {
 }
 
 void MainViewModel::Click(IInspectable const& parameter) {
-	hstring value = parameter.as<IReference<hstring>>().Value();
-	Title(value + L"Johan Lindfors");
+	hstring value = unbox_value<hstring>(parameter);
+	Title(L"Clicked");
 
 	textSize = 100;
 	RaisePropertyChanged(L"TextSize");

@@ -26,7 +26,7 @@ namespace winrt::MvvmCppWinRT::implementation
 
 			double numValue = winrt::unbox_value<double>(value);
 
-			hstring paramString = parameter.as<IReference<hstring>>().Value();
+			hstring paramString = unbox_value<hstring>(parameter);
 
 			double numParam = stod(wstring(paramString.data()));
 			if (numParam == 0) {

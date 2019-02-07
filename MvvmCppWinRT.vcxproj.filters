@@ -24,18 +24,16 @@
     <ClCompile Include="App.cpp" />
     <ClCompile Include="Generated Files\module.g.cpp" />
     <ClCompile Include="MainPage.cpp" />
-    <ClCompile Include="Framework\ViewModelBase.cpp" />
     <ClCompile Include="ViewModels\MainViewModel.cpp" />
-    <ClCompile Include="Framework\ScaleConverter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.h" />
     <ClInclude Include="MainPage.h" />
     <ClInclude Include="Framework\DelegateCommand.h" />
-    <ClInclude Include="Framework\ViewModelBase.h" />
     <ClInclude Include="ViewModels\MainViewModel.h" />
     <ClInclude Include="Framework\ScaleConverter.h" />
+    <ClInclude Include="Framework\BindableBase.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
@@ -65,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="MvvmCppWinRT_TemporaryKey.pfx" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
