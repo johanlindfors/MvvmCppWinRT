@@ -6,11 +6,11 @@ namespace winrt::MvvmCppWinRT::implementation
 {
 	struct DelegateCommand : DelegateCommandT<DelegateCommand>
 	{
-		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> execute)
+		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> const& execute)
 			: DelegateCommand(execute, nullptr) 
 		{}
 
-		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> execute, std::function<bool(Windows::Foundation::IInspectable)> canExecute)
+		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> const& execute, std::function<bool(Windows::Foundation::IInspectable)> const& canExecute)
 		{
 			if (execute == nullptr) {
 				throw winrt::hresult_invalid_argument(L"execute");

@@ -18,6 +18,7 @@ namespace winrt::MvvmCppWinRT::implementation
 	private:
 		void Click(Windows::Foundation::IInspectable const& parameter);
 		void AnotherClick();
+		bool CanClick();
 
 		hstring title;
 		double textSize;
