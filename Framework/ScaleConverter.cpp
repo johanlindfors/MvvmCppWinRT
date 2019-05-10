@@ -1,6 +1,7 @@
 #pragma once
 #include "pch.h"
 #include "ScaleConverter.h"
+#include "ScaleConverter.g.cpp"
 
 using namespace std;
 using namespace winrt;

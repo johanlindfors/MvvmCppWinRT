@@ -1,5 +1,6 @@
 ﻿#include "pch.h"
 #include "MainViewModel.h"
+#include "MainViewModel.g.cpp"
 
 using namespace winrt;
 using namespace MvvmCppWinRT::implementation;
