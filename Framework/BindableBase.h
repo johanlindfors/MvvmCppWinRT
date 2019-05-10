@@ -1,35 +1,16 @@
-﻿//
-// Declaration of the BindableBase class.
-//
-
-#pragma once
-
+﻿#pragma once
 #include "BindableBase.g.h"
-
-using namespace winrt;
-using namespace Windows::UI::Xaml::Data;
 
 namespace winrt::MvvmCppWinRT::implementation
 {
     struct BindableBase : BindableBaseT<BindableBase>
-    {
-		void RaisePropertyChanged(hstring const& propertyName) 
-		{
-			propertyChanged(*this, PropertyChangedEventArgs(propertyName));
-		}
-
-		event_token PropertyChanged(PropertyChangedEventHandler const& handler)
-		{
-			return propertyChanged.add(handler);
-		}
-
-		void PropertyChanged(event_token const& token)
-		{
-			propertyChanged.remove(token);
-		}
+    {		
+		void RaisePropertyChanged(winrt::hstring const& propertyName);
+		winrt::event_token PropertyChanged(winrt::Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler);
+		void PropertyChanged(winrt::event_token const& token) noexcept;
 
 	private:
-		event<Windows::UI::Xaml::Data::PropertyChangedEventHandler> propertyChanged;
+		event<winrt::Windows::UI::Xaml::Data::PropertyChangedEventHandler> propertyChanged;
     };
 }
 

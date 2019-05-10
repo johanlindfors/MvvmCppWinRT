@@ -4,7 +4,8 @@ import "Framework/DelegateCommand.idl";
 
 namespace MvvmCppWinRT
 {
-	unsealed runtimeclass MainViewModel : BindableBase
+	[default_interface]
+	unsealed runtimeclass MainViewModel : MvvmCppWinRT.BindableBase
     {
         MainViewModel();
 		String Title{ get; set; };
