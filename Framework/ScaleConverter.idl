@@ -1,8 +1,8 @@
 namespace MvvmCppWinRT
 { 
-	[default_interface]
-    runtimeclass ScaleConverter : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.IValueConverter
-    {
-		ScaleConverter();
-	}
+  [default_interface]
+  runtimeclass ScaleConverter : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.IValueConverter
+  {
+    ScaleConverter();
+  }
 }

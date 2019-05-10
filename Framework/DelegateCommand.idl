@@ -1,7 +1,7 @@
 namespace MvvmCppWinRT
 {
-	runtimeclass DelegateCommand : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Input.ICommand
-    {
-		void RaiseCanExecuteChanged();
-	}
+  runtimeclass DelegateCommand : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Input.ICommand
+  {
+    void RaiseCanExecuteChanged();
+  }
 }
