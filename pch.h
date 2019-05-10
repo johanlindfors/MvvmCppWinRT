@@ -1,7 +1,6 @@
 ﻿#pragma once
 
 #include <windows.h>
-#include <string>
 #include <unknwn.h>
 #include <restrictederrorinfo.h>
 #include <hstring.h>
