@@ -5,7 +5,7 @@
     <!--To troubleshoot CppWinRT build issues, set CppWinRTVerbosity to 'high'
     For complete documentation on CppWinRT project customization, please see:
     https://github.com/Microsoft/xlang/tree/master/src/package/cppwinrt/nuget -->
-    <CppWinRTVerbosity>normal</CppWinRTVerbosity>
+    <CppWinRTVerbosity>high</CppWinRTVerbosity>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
