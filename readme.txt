@@ -19,5 +19,5 @@ Steps:
 
 ========================================================================
 Learn more about C++/WinRT here:
-https://github.com/microsoft/cppwinrt/
+http://aka.ms/cppwinrt/
 ========================================================================

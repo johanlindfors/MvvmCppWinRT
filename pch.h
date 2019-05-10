@@ -20,4 +20,3 @@
 #include "BindableBase.h"
 #include "MainViewModel.h"
 #include "ScaleConverter.h"
-#include "ObservableVector.h"

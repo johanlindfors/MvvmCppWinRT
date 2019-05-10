@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include "MainPage.h"
-#include "ViewModels/MainViewModel.h"
+#include "MainPage.g.cpp"
+#include "MainViewModel.h"
 
 using namespace winrt;
 using namespace Windows::UI::Xaml;

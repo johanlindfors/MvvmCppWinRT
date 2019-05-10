@@ -22,9 +22,18 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="App.cpp" />
-    <ClCompile Include="Generated Files\module.g.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="ViewModels\MainViewModel.cpp" />
+    <ClCompile Include="Generated Files\module.g.cpp" />
+    <ClCompile Include="Framework\BindableBase.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ScaleConverter.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\DelegateCommand.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -64,6 +73,7 @@
   <ItemGroup>
     <None Include="MvvmCppWinRT_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="PropertySheet.props" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">

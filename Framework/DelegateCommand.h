@@ -1,67 +1,31 @@
 ﻿#pragma once
 
 #include "DelegateCommand.g.h"
+#include <functional>
 
 namespace winrt::MvvmCppWinRT::implementation
 {
 	struct DelegateCommand : DelegateCommandT<DelegateCommand>
 	{
-		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> const& execute)
-			: DelegateCommand(execute, nullptr) 
-		{}
+		DelegateCommand(std::function<void(winrt::Windows::Foundation::IInspectable)> const& execute);
 
-		DelegateCommand(std::function<void(Windows::Foundation::IInspectable)> const& execute, std::function<bool(Windows::Foundation::IInspectable)> const& canExecute)
-		{
-			if (execute == nullptr) {
-				throw winrt::hresult_invalid_argument(L"execute");
-			}
-			executeDelegate = execute;
-			canExecuteDelegate = canExecute;
-		}
+		DelegateCommand(std::function<void(winrt::Windows::Foundation::IInspectable)> const& execute, std::function<bool(winrt::Windows::Foundation::IInspectable)> const& canExecute);
+		
+		void RaiseCanExecuteChanged();
 
-		void RaiseCanExecuteChanged()
-		{
-			canExecuteChanged(*this, Windows::Foundation::IInspectable());
-		}
+		winrt::event_token CanExecuteChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler);
 
-		winrt::event_token CanExecuteChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
-		{
-			return canExecuteChanged.add(handler);
-		}
+		void CanExecuteChanged(winrt::event_token const& token);
 
-		void CanExecuteChanged(event_token const& token) 
-		{
-			canExecuteChanged.remove(token);
-		}
+		bool CanExecute(winrt::Windows::Foundation::IInspectable const& parameter);
 
-		bool CanExecute(Windows::Foundation::IInspectable const& parameter)
-		{
-			if (canExecuteDelegate == nullptr) {
-				return true;
-			}
-
-			bool canExecute = canExecuteDelegate(parameter);
-
-			if (lastCanExecute != canExecute) {
-				lastCanExecute = canExecute;
-				RaiseCanExecuteChanged();
-			}
-
-			return lastCanExecute;
-		}
-
-		void Execute(Windows::Foundation::IInspectable const& parameter)
-		{
-			if (executeDelegate != nullptr) {
-				executeDelegate(parameter);
-			}
-		}
+		void Execute(winrt::Windows::Foundation::IInspectable const& parameter);
 
 	private:
-		event<Windows::Foundation::EventHandler<Windows::Foundation::IInspectable>> canExecuteChanged;
+		event<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>> canExecuteChanged;
 
-		std::function<void(Windows::Foundation::IInspectable)> executeDelegate;
-		std::function<bool(Windows::Foundation::IInspectable)> canExecuteDelegate;
+		std::function<void(winrt::Windows::Foundation::IInspectable)> executeDelegate;
+		std::function<bool(winrt::Windows::Foundation::IInspectable)> canExecuteDelegate;
 		bool lastCanExecute = true;
 	};
 }

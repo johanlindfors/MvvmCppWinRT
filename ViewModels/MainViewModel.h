@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include "MainViewModel.g.h"
-#include "..\Framework\BindableBase.h"
+#include "BindableBase.h"
 #include "DelegateCommand.h"
 
 namespace winrt::MvvmCppWinRT::implementation

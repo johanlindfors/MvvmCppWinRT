@@ -1,6 +1,7 @@
 namespace MvvmCppWinRT
 {
-    unsealed runtimeclass BindableBase : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.INotifyPropertyChanged
+	[default_interface]
+	unsealed runtimeclass BindableBase : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.INotifyPropertyChanged
 	{
 		BindableBase();
 		protected void RaisePropertyChanged(String propertyName);
