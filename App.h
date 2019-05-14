@@ -7,8 +7,8 @@ namespace winrt::MvvmCppWinRT::implementation
     {
         App();
 
-        void OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const&);
-        void OnSuspending(IInspectable const&, Windows::ApplicationModel::SuspendingEventArgs const&);
-        void OnNavigationFailed(IInspectable const&, Windows::UI::Xaml::Navigation::NavigationFailedEventArgs const&);
+        void OnLaunched(winrt::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const&);
+        void OnSuspending(winrt::Windows::Foundation::IInspectable const&, winrt::Windows::ApplicationModel::SuspendingEventArgs const&);
+        void OnNavigationFailed(winrt::Windows::Foundation::IInspectable const&, winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs const&);
     };
 }

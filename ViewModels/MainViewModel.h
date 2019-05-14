@@ -10,17 +10,17 @@ namespace winrt::MvvmCppWinRT::implementation
 	{
 		MainViewModel();
 
-		hstring Title();
-		void Title(hstring const& value);
+		winrt::hstring Title();
+		void Title(winrt::hstring const& value);
 		double TextSize();
 		winrt::Windows::UI::Xaml::Input::ICommand OnClickCommand() { return clickCommand; }
 
 	private:
-		void Click(Windows::Foundation::IInspectable const& parameter);
+		void Click(winrt::Windows::Foundation::IInspectable const& parameter);
 		void AnotherClick();
 		bool CanClick();
 
-		hstring title;
+		winrt::hstring title;
 		double textSize;
 		MvvmCppWinRT::DelegateCommand clickCommand{ nullptr };
 	};
