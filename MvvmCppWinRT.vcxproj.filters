@@ -11,7 +11,7 @@
     <Midl Include="ViewModels\MainViewModel.idl">
       <Filter>ViewModels</Filter>
     </Midl>
-    <Midl Include="MainPage.idl" />
+    <Midl Include="Pages\MainPage.idl" />
     <Midl Include="Framework\ScaleConverter.idl">
       <Filter>Framework</Filter>
     </Midl>
@@ -22,7 +22,7 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="App.cpp" />
-    <ClCompile Include="MainPage.cpp" />
+    <ClCompile Include="Pages\MainPage.cpp" />
     <ClCompile Include="ViewModels\MainViewModel.cpp" />
     <ClCompile Include="Generated Files\module.g.cpp" />
     <ClCompile Include="Framework\BindableBase.cpp">
@@ -38,7 +38,7 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.h" />
-    <ClInclude Include="MainPage.h" />
+    <ClInclude Include="Pages\MainPage.h" />
     <ClInclude Include="Framework\DelegateCommand.h" />
     <ClInclude Include="ViewModels\MainViewModel.h" />
     <ClInclude Include="Framework\ScaleConverter.h" />
@@ -88,13 +88,19 @@
     <Filter Include="ViewModels">
       <UniqueIdentifier>{e53185eb-e6a7-472d-88d7-b693ae3d35d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{0202f3af-3bbe-41f8-8de7-36f8f720f3c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MainPage.xaml">
+    <Page Include="Pages\MainPage.xaml">
       <Filter>Pages</Filter>
+    </Page>
+    <Page Include="Controls\SimpleUserControl.xaml">
+      <Filter>Controls</Filter>
     </Page>
   </ItemGroup>
 </Project>

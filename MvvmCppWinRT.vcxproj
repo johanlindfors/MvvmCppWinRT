@@ -80,12 +80,12 @@
       <WarningLevel>Level4</WarningLevel>
       <AdditionalOptions Condition="'$(CppWinRTHeapEnforcement)'==''">/DWINRT_NO_MAKE_DETECTION %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(ProjectDir)Pages;$(ProjectDir)Framework;$(ProjectDir)ViewModels;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectDir)Pages;$(ProjectDir)Framework;$(ProjectDir)ViewModels;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Pages;$(ProjectDir)Framework;$(ProjectDir)ViewModels;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)Pages;$(ProjectDir)Framework;$(ProjectDir)ViewModels;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Pages;$(ProjectDir)Framework;$(ProjectDir)ViewModels;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)Pages;$(ProjectDir)Framework;$(ProjectDir)ViewModels;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(GeneratedFilesDir)Pages;$(GeneratedFilesDir)Framework;$(GeneratedFilesDir)ViewModels;$(GeneratedFilesDir)Controls;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(GeneratedFilesDir)Pages;$(GeneratedFilesDir)Framework;$(GeneratedFilesDir)ViewModels;$(GeneratedFilesDir)Controls;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(GeneratedFilesDir)Pages;$(GeneratedFilesDir)Framework;$(GeneratedFilesDir)ViewModels;$(GeneratedFilesDir)Controls;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(GeneratedFilesDir)Pages;$(GeneratedFilesDir)Framework;$(GeneratedFilesDir)ViewModels;$(GeneratedFilesDir)Controls;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(GeneratedFilesDir)Pages;$(GeneratedFilesDir)Framework;$(GeneratedFilesDir)ViewModels;$(GeneratedFilesDir)Controls;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(GeneratedFilesDir)Pages;$(GeneratedFilesDir)Framework;$(GeneratedFilesDir)ViewModels;$(GeneratedFilesDir)Controls;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -105,8 +105,12 @@
     <ClInclude Include="App.h">
       <DependentUpon>App.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="MainPage.h">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <ClInclude Include="Pages\MainPage.h">
+      <DependentUpon>Pages\MainPage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Controls\SimpleUserControl.h">
+      <DependentUpon>Controls\SimpleUserControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="ViewModels\MainViewModel.h">
       <DependentUpon>ViewModels\MainViewModel.idl</DependentUpon>
@@ -117,7 +121,10 @@
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SimpleUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -157,8 +164,12 @@
     <ClCompile Include="App.cpp">
       <DependentUpon>App.xaml</DependentUpon>
     </ClCompile>
-    <ClCompile Include="MainPage.cpp">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <ClCompile Include="Pages\MainPage.cpp">
+      <DependentUpon>Pages\MainPage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Controls\SimpleUserControl.cpp">
+      <DependentUpon>Controls\SimpleUserControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="ViewModels\MainViewModel.cpp">
       <DependentUpon>ViewModels\MainViewModel.idl</DependentUpon>
@@ -178,8 +189,12 @@
     <Midl Include="Framework\ScaleConverter.idl">
       <SubType>Designer</SubType>
     </Midl>
-    <Midl Include="MainPage.idl">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Midl Include="Pages\MainPage.idl">
+      <DependentUpon>Pages\MainPage.xaml</DependentUpon>
+    </Midl>
+    <Midl Include="Controls\SimpleUserControl.idl">
+      <DependentUpon>Controls\SimpleUserControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Midl>
     <Midl Include="ViewModels\MainViewModel.idl">
       <SubType>Designer</SubType>

@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 #include "MainViewModel.g.h"
-#include "BindableBase.h"
-#include "DelegateCommand.h"
+#include "Framework/BindableBase.h"
+#include "Framework/DelegateCommand.h"
 
 namespace winrt::MvvmCppWinRT::implementation
 {

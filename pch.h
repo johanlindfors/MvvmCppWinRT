@@ -13,7 +13,7 @@
 #include <winrt/Windows.UI.Xaml.Navigation.h>
 #include <winrt/Windows.UI.Xaml.Input.h>
 
-#include "DelegateCommand.h"
-#include "BindableBase.h"
-#include "MainViewModel.h"
-#include "ScaleConverter.h"
+#include "Framework/DelegateCommand.h"
+#include "Framework/BindableBase.h"
+#include "ViewModels/MainViewModel.h"
+#include "Framework/ScaleConverter.h"

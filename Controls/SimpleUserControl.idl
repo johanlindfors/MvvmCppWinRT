@@ -1,0 +1,9 @@
+namespace MvvmCppWinRT
+{
+    [default_interface]
+    runtimeclass SimpleUserControl : Windows.UI.Xaml.Controls.UserControl
+    {
+        SimpleUserControl();
+        Int32 MyProperty;
+    }
+}
