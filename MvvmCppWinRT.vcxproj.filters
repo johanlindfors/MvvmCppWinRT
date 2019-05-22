@@ -18,6 +18,7 @@
     <Midl Include="Framework\BindableBase.idl">
       <Filter>Framework</Filter>
     </Midl>
+    <Midl Include="Controls\SimpleUserControl.idl" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -34,6 +35,7 @@
     <ClCompile Include="Framework\DelegateCommand.cpp">
       <Filter>Framework</Filter>
     </ClCompile>
+    <ClCompile Include="Controls\SimpleUserControl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -43,6 +45,7 @@
     <ClInclude Include="ViewModels\MainViewModel.h" />
     <ClInclude Include="Framework\ScaleConverter.h" />
     <ClInclude Include="Framework\BindableBase.h" />
+    <ClInclude Include="Controls\SimpleUserControl.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
